@@ -1,0 +1,11 @@
+{
+  "name": "dockerhub-s3rver",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:devoxa/dockerhub-s3rver.git",
+  "author": "queicherius <queicherius@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "s3rver": "^3.6.1"
+  }
+}
