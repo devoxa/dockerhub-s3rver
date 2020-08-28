@@ -10,5 +10,5 @@ This is an inofficial docker image to run [s3rver](https://github.com/jamhall/s3
 docker run -d --name s3rver -p 4568:4568 devoxa/s3rver
 
 # You can also pass additional arguments to initialize buckets:
-docker run -d --name s3rver -p 4568:4568 devoxa/s3rver --configure-bucket uploads
+docker run -d --name s3rver -p 4568:4568 -e ARGS="--configure-bucket uploads" devoxa/s3rver
 ```
