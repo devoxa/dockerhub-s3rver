@@ -4,9 +4,8 @@ WORKDIR /application
 COPY package.json yarn.lock ./
 COPY patches ./patches
 RUN yarn --silent --no-progress --frozen-lockfile
-COPY entrypoint.sh ./
 
 EXPOSE 4568
 VOLUME /data
 
-ENTRYPOINT ["./entrypoint.sh"]
+CMD ["./node_modules/.bin/s3rver", "-a", "0.0.0.0", "-p", "4568", "-d", "/data", "$ARGS"]
