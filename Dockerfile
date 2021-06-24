@@ -1,5 +1,8 @@
 FROM node:16-alpine
 
+RUN apk add --no-cache tini
+ENTRYPOINT ["/sbin/tini", "--"]
+
 WORKDIR /application
 COPY package.json yarn.lock ./
 COPY patches ./patches
