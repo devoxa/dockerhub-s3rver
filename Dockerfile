@@ -2,7 +2,8 @@ FROM node:14-alpine
 
 WORKDIR /application
 COPY package.json yarn.lock ./
-RUN yarn --silent --no-progress --frozen-lockfile --production
+COPY patches ./patches
+RUN yarn --silent --no-progress --frozen-lockfile
 COPY entrypoint.sh ./
 
 EXPOSE 4568

@@ -1,0 +1,15 @@
+diff --git a/node_modules/s3rver/lib/middleware/authentication.js b/node_modules/s3rver/lib/middleware/authentication.js
+index ceac7b8..551c7d0 100644
+--- a/node_modules/s3rver/lib/middleware/authentication.js
++++ b/node_modules/s3rver/lib/middleware/authentication.js
+@@ -69,7 +69,9 @@ module.exports = () =>
+     };
+ 
+     const mechanismCount = Object.values(mechanisms).filter(Boolean).length;
+-    if (mechanismCount === 0) {
++    const bearerHeader = ctx.headers['authorization'] && ctx.headers['authorization'].startsWith('Bearer ')
++
++    if (mechanismCount === 0 || mechanismCount === 1 && bearerHeader) {
+       return next();
+     }
+     if (mechanismCount !== 1) {

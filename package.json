@@ -5,7 +5,13 @@
   "repository": "git@github.com:devoxa/dockerhub-s3rver.git",
   "author": "queicherius <queicherius@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "postinstall": "./node_modules/.bin/patch-package"
+  },
   "dependencies": {
     "s3rver": "^3.6.1"
+  },
+  "devDependencies": {
+    "patch-package": "^6.4.7"
   }
 }
