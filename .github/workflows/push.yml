@@ -7,7 +7,7 @@ on:
 
 jobs:
   build-and-push-docker-image:
-    name: 'Build & Push Docker Image'
+    name: 'Build & push Docker image'
     runs-on: ubuntu-latest
     timeout-minutes: 30
 
