@@ -12,6 +12,6 @@
     "s3rver": "^3.6.1"
   },
   "devDependencies": {
-    "patch-package": "^6.4.7"
+    "patch-package": "6.4.7"
   }
 }
